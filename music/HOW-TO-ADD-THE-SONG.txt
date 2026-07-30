@@ -1,0 +1,77 @@
+=================================================
+  ADDING "PERFECT" BY ED SHEERAN
+=================================================
+
+I could not download the song for you - it's
+copyrighted, and I'm not able to pull it from
+YouTube or a streaming service.
+
+But YOU adding your own copy takes 2 minutes.
+
+-------------------------------------------------
+IF YOU ALREADY OWN IT
+-------------------------------------------------
+If you have the mp3 (iTunes purchase, CD rip,
+a file you already own):
+
+  1. Rename it to:   song.mp3
+  2. Drop it in this folder
+  3. Done - the play button works automatically
+
+-------------------------------------------------
+IF YOU DON'T HAVE THE FILE
+-------------------------------------------------
+Buy it - it's about Rs 15-20:
+
+  - Amazon Music (amazon.in) - buy the single
+  - iTunes / Apple Music - buy the track
+  - Google Play / YouTube Music - purchase
+
+Then download the mp3, rename to song.mp3,
+put it here.
+
+-------------------------------------------------
+IMPORTANT - PLEASE READ
+-------------------------------------------------
+GitHub Pages is PUBLIC hosting. Putting a
+copyrighted song on a public site is technically
+distribution, and GitHub can take down repos
+after a copyright complaint.
+
+For a tiny personal page nobody will ever find,
+the realistic risk is very low. But you should
+know it before you do it.
+
+SAFER OPTIONS:
+
+ a) Use a 30-second clip instead of the full
+    song (much lower risk, and honestly the
+    chorus is the part that matters)
+
+ b) Use royalty-free romantic music:
+      - pixabay.com/music
+      - freesound.org
+    Free, legal, no risk at all.
+
+ c) Skip the music on the site and just play
+    Perfect out loud when she opens it.
+    Genuinely the nicest version of this.
+
+-------------------------------------------------
+IF YOU DON'T WANT MUSIC AT ALL
+-------------------------------------------------
+Open config.js, find the music block, set:
+
+    enabled: false
+
+The button disappears completely.
+
+-------------------------------------------------
+NOTE ON FILE SIZE
+-------------------------------------------------
+A full song is 3-8 MB. That's a slow load on
+mobile data. If it's over 5 MB, compress it at
+   https://www.freeconvert.com/mp3-compressor
+to around 128kbps - sounds fine on phone speakers.
+
+=================================================

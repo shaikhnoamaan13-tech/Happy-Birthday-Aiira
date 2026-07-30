@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday 💗</title>
+<meta name="description" content="A little corner of the internet, made just for you.">
+<meta name="theme-color" content="#FFEEF3">
+
+<!-- Social share preview (shows a photo when you send the link on WhatsApp) -->
+<meta property="og:title" content="Happy Birthday 💗">
+<meta property="og:description" content="A little corner of the internet, made just for you.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="images/share.jpg">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💗</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="pre-heart"></div>
+  <div class="pre-text">loading something lovely</div>
+</div>
+
+<!-- ============ MIDNIGHT LOCK ============ -->
+<div id="lockScreen" hidden>
+  <div class="lock-inner">
+    <div class="lock-small" id="lockSmall"></div>
+    <div class="lock-lock" aria-hidden="true">
+      <svg viewBox="0 0 48 56">
+        <path d="M14 24 V16 a10 10 0 0 1 20 0 v8" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        <rect x="7" y="24" width="34" height="28" rx="6" fill="currentColor"/>
+        <circle cx="24" cy="36" r="3.4" fill="#FFF1F5"/>
+        <rect x="22.6" y="37" width="2.8" height="7" rx="1.4" fill="#FFF1F5"/>
+      </svg>
+    </div>
+    <h1 class="lock-title" id="lockTitle"></h1>
+    <p class="lock-msg" id="lockMsg"></p>
+
+    <div class="countdown lock-cd" id="lockCountdown" role="timer" aria-live="polite">
+      <div class="cd-unit"><span class="cd-num" id="lkD">00</span><div class="cd-label">Days</div></div>
+      <div class="cd-unit"><span class="cd-num" id="lkH">00</span><div class="cd-label">Hours</div></div>
+      <div class="cd-unit"><span class="cd-num" id="lkM">00</span><div class="cd-label">Minutes</div></div>
+      <div class="cd-unit"><span class="cd-num" id="lkS">00</span><div class="cd-label">Seconds</div></div>
+    </div>
+
+    <p class="lock-hint" id="lockHint"></p>
+  </div>
+</div>
+
+<!-- ============ FLOATING PETALS ============ -->
+<canvas id="petals"></canvas>
+
+<!-- ============ MUSIC ============ -->
+<audio id="audio" loop preload="none"></audio>
+<div class="music-tip" id="musicTip"></div>
+<button id="musicBtn" aria-label="Play music" hidden>
+  <svg class="ico" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+  <div class="bars"><span></span><span></span><span></span><span></span></div>
+</button>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <p class="hero-small" id="heroSmall"></p>
+
+  <div class="hero-photo-wrap">
+    <div class="hero-ring"></div>
+    <div class="hero-ring two"></div>
+    <img class="hero-photo" id="heroPhoto" alt="" >
+  </div>
+
+  <h1 class="hero-name" id="heroName"></h1>
+  <p class="hero-sub" id="heroSub"></p>
+
+  <!-- Countdown -->
+  <div class="countdown" id="countdown" role="timer" aria-live="polite">
+    <div class="cd-unit"><span class="cd-num" id="cdD">00</span><div class="cd-label">Days</div></div>
+    <div class="cd-unit"><span class="cd-num" id="cdH">00</span><div class="cd-label">Hours</div></div>
+    <div class="cd-unit"><span class="cd-num" id="cdM">00</span><div class="cd-label">Minutes</div></div>
+    <div class="cd-unit"><span class="cd-num" id="cdS">00</span><div class="cd-label">Seconds</div></div>
+  </div>
+  <p class="countdown-caption" id="cdCaption"></p>
+
+  <!-- Shown when the birthday arrives -->
+  <div class="celebration">
+    <h2 class="celebration-title" id="celTitle"></h2>
+    <p class="celebration-sub" id="celSub"></p>
+  </div>
+
+  <div class="scroll-hint"><span class="line"></span>scroll</div>
+</header>
+
+<!-- ============ LETTER ============ -->
+<section class="section-pad" id="letter">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title" id="letterTitle"></h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="letter-card reveal d1" id="letterCard"></div>
+  </div>
+</section>
+
+<!-- ============ SOMETHING I NEED TO SAY ============ -->
+<section class="section-pad tinted" id="saying">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title" id="sayTitle"></h2>
+      <p class="sec-sub" id="saySub"></p>
+      <div class="sec-rule"></div>
+    </div>
+
+    <div class="say-card reveal d1" id="sayApology"></div>
+
+    <div class="belief reveal d2">
+      <h3 class="belief-title" id="beliefTitle"></h3>
+      <div id="beliefBody"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REASONS ============ -->
+<section class="section-pad" id="reasons">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title" id="reasonsTitle"></h2>
+      <p class="sec-sub" id="reasonsSub"></p>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="reasons-grid" id="reasonsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section-pad tinted" id="story">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title" id="tlTitle"></h2>
+      <p class="sec-sub" id="tlSub"></p>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section-pad" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title" id="galTitle"></h2>
+      <p class="sec-sub" id="galSub"></p>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="gallery" id="galleryGrid"></div>
+    <div class="gallery-empty" id="galleryEmpty" style="display:none">
+      <strong>No photos yet.</strong><br>
+      Drop your pictures into the <code>images/gallery/</code> folder<br>
+      named <code>1.jpg</code>, <code>2.jpg</code>, <code>3.jpg</code>… and they'll appear right here.
+    </div>
+  </div>
+</section>
+
+<!-- ============ GIFT ============ -->
+<section class="section-pad tinted" id="gift">
+  <div class="wrap gift-wrap">
+    <div class="sec-head reveal">
+      <h2 class="sec-title" id="giftTitle"></h2>
+      <p class="sec-sub" id="giftSub"></p>
+      <div class="sec-rule"></div>
+    </div>
+
+    <div class="gift-box shake reveal d1" id="giftBox" role="button" tabindex="0" aria-label="Open your gift">
+      <div class="gb-bow"></div>
+      <div class="gb-lid"></div>
+      <div class="gb-base"></div>
+      <div class="gb-ribbon-v"></div>
+    </div>
+
+    <button class="gift-btn reveal d2" id="giftBtn"></button>
+
+    <div class="gift-reveal" id="giftReveal">
+      <div class="gift-card propose">
+
+        <p class="forgive-line" id="forgiveLine"></p>
+
+        <div class="ring-wrap" aria-hidden="true">
+          <svg class="ring" viewBox="0 0 120 150">
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%"   stop-color="#F3D9A4"/>
+                <stop offset="45%"  stop-color="#DDB39F"/>
+                <stop offset="100%" stop-color="#B76E79"/>
+              </linearGradient>
+              <linearGradient id="stoneGrad" x1="0" y1="0" x2="0.6" y2="1">
+                <stop offset="0%"   stop-color="#FFFFFF"/>
+                <stop offset="40%"  stop-color="#FFE9F0"/>
+                <stop offset="100%" stop-color="#F5B7CB"/>
+              </linearGradient>
+            </defs>
+
+            <!-- sparkles -->
+            <g class="sparkles" fill="#FFF">
+              <path class="sp sp1" d="M22 26 l2.6 6.4 6.4 2.6 -6.4 2.6 -2.6 6.4 -2.6-6.4 -6.4-2.6 6.4-2.6z"/>
+              <path class="sp sp2" d="M98 44 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2z"/>
+              <path class="sp sp3" d="M84 15 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6-4 -4-1.6 4-1.6z"/>
+            </g>
+
+            <!-- band -->
+            <ellipse cx="60" cy="104" rx="30" ry="31"
+                     fill="none" stroke="url(#goldGrad)" stroke-width="8"/>
+            <!-- prongs -->
+            <path d="M50 70 L60 58 L70 70" fill="none" stroke="url(#goldGrad)" stroke-width="4.5" stroke-linecap="round"/>
+            <!-- stone -->
+            <g class="stone">
+              <path d="M60 30 L80 52 L60 76 L40 52 Z" fill="url(#stoneGrad)"/>
+              <path d="M60 30 L80 52 L60 52 Z" fill="#FFFFFF" opacity=".78"/>
+              <path d="M60 30 L40 52 L60 52 Z" fill="#FFF6F9" opacity=".92"/>
+              <path d="M40 52 L60 76 L60 52 Z" fill="#F7C9D8" opacity=".85"/>
+              <path d="M80 52 L60 76 L60 52 Z" fill="#EFAFC5" opacity=".85"/>
+              <path d="M60 30 L80 52 L60 76 L40 52 Z" fill="none" stroke="#FFFFFF" stroke-width="1.1" opacity=".65"/>
+            </g>
+          </svg>
+        </div>
+
+        <p class="lead-in" id="leadIn"></p>
+        <h3 class="question" id="question"></h3>
+        <p class="after-text" id="afterText"></p>
+        <small id="giftRevealSmall"></small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-heart">♥</div>
+  <p id="footerText"></p>
+  <div class="fname" id="footerName"></div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lb-count" id="lbCount"></div>
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+=========================================
+   AIIRA'S BIRTHDAY SITE - QUICK START
+=========================================
+
+ALREADY DONE:
+  - All 11 of your photos are in, with captions
+  - Rotations fixed, black bars trimmed,
+    dark flower photo brightened
+  - All compressed to load fast on mobile
+  - Snow Kingdom photo is the main image
+  - Your name (Noamaan) signs the letter
+  - Timeline: sea in Thane, the car on 5 Jan,
+    strawbelle.co, Indus Wok, Brew & Batter
+  - "Something I Need To Say" section with
+    your apology + what you believe about her
+
+STILL TO DO:
+
+1. READ IT ONCE
+   Open config.js.
+   - Read the letter. Change what isn't you.
+   - Read the APOLOGY twice. If it doesn't
+     sound like how you'd really say sorry,
+     rewrite it. That one matters most.
+   - Read the 11 photo captions. I guessed;
+     you know what really happened in each.
+   - Swap the "reasons I love you" for real ones.
+
+2. ADD THE SONG (optional)
+   I couldn't download "Perfect" for you -
+   it's copyrighted. If you own the mp3,
+   rename it song.mp3 and put it in music/
+   Read music/HOW-TO-ADD-THE-SONG.txt
+
+   The play button hides itself if there's
+   no song, so nothing looks broken.
+
+3. PUT IT ONLINE
+   Read README.md - click-by-click GitHub guide.
+
+TO PREVIEW NOW:
+   Double-click index.html
+
+THE MIDNIGHT LOCK:
+   The site stays locked until midnight on
+   her birthday, then opens BY ITSELF.
+   She doesn't need to refresh.
+
+   So you can send her the link ANY TIME.
+   It won't open early.
+
+   YOUR PREVIEW LINK:  add  ?key
+   e.g.  yoursite.github.io/for-aiira/?key
+   That skips the lock so you can check it.
+
+   *** NEVER send her the ?key link. ***
+
+THE PROPOSAL:
+   The gift box now has the forgiveness line,
+   a diamond ring, and "Will you marry me?"
+   Read it twice in config.js. Make the
+   words sound like YOU asking.
+
+=========================================
